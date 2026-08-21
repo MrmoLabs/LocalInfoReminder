@@ -6,6 +6,7 @@
 
 - 增加统一应用版本号、GitHub Releases 新版检查和托盘检查入口。
 - 增加 Inno Setup 安装器与 GitHub Actions 发布流程，产出安装器、便携 ZIP 和 SHA-256 校验文件。
+- 安装器使用 Inno Setup 内置英文界面，避免 GitHub Windows runner 缺少外部简体中文语言包时构建失败；应用内的中英文界面不受影响。
 - 项目运行、测试和 PyInstaller 打包环境统一为 Python 3.12。
 - 移除许可证激活、试用限制、完整性校验、许可证签发器及 PyArmor 安全打包流程。
 - 普通构建配置统一为 `packaging/specs/LocalInfoReminder.spec`。
