@@ -1,0 +1,353 @@
+{
+    "session_state": {
+        "time": "34:00",
+        "classes": {
+            "Nameless Shield": {
+                "count": 4,
+                "mode_index": 0
+            },
+            "Wind Wall": {
+                "count": 3,
+                "mode_index": 3
+            },
+            "Healer": {
+                "count": 2,
+                "mode_index": 0
+            }
+        }
+    },
+    "global_events": [
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "time": "25:20",
+            "name": "野怪刷新",
+            "sound": "global_events/wild_spawn.MP3"
+        },
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "time": "20:20",
+            "name": "野怪刷新",
+            "sound": "global_events/wild_spawn.MP3"
+        },
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "time": "15:20",
+            "name": "野怪刷新",
+            "sound": "global_events/wild_spawn.MP3"
+        },
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "time": "10:20",
+            "name": "野怪刷新",
+            "sound": "global_events/wild_spawn.MP3"
+        },
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "time": "05:20",
+            "name": "野怪刷新",
+            "sound": "global_events/wild_spawn.MP3"
+        }
+    ],
+    "classes_template": [
+        {
+            "is_enabled": true,
+            "id": "Nameless Shield",
+            "name": "无名循环",
+            "default_hotkey": "num_1",
+            "interval": 10.0,
+            "cooldown": 80.0,
+            "skip_cd_hotkey": "num_2",
+            "is_muted": false
+        },
+        {
+            "is_enabled": false,
+            "id": "Wind Wall",
+            "name": "风墙循环",
+            "default_hotkey": "mouse_x2",
+            "interval": 12.6,
+            "skip_cd_hotkey": "Click to Set",
+            "cooldown": 80.0,
+            "is_muted": false,
+            "independent_hotkeys": [
+                "num_1",
+                "num_2",
+                "num_3"
+            ]
+        },
+        {
+            "is_enabled": false,
+            "id": "Healer",
+            "name": "奶妈循环",
+            "default_hotkey": "mouse_x1",
+            "interval": 6.9,
+            "cooldown": 80.0,
+            "skip_cd_hotkey": "",
+            "is_muted": false
+        }
+    ],
+    "overlay_bg_alpha": 57,
+    "hide_overlay_background": false,
+    "ocr_enabled": true,
+    "enable_time_display": true,
+    "enable_classes": true,
+    "enable_global_events": true,
+    "ocr_time_sync": true,
+    "miracle_flash_threshold": 3.0,
+    "vision_detection": {
+        "regions": {
+            "skill_bar": {
+                "left": 0.41245059901338965,
+                "top": 0.20829999999999999,
+                "width": 0.20412339675828045,
+                "height": 0.0317
+            },
+            "time_main": {
+                "left": 0.47742754251995834,
+                "top": 0.02315,
+                "width": 0.04383980909406453,
+                "height": 0.0463
+            },
+            "time_prep": {
+                "left": 0.47656,
+                "top": 0.14352,
+                "width": 0.04896,
+                "height": 0.0463
+            },
+            "target_event_notification": {
+                "left": 0.4046279069767442,
+                "top": 0.207,
+                "width": 0.18497674418604657,
+                "height": 0.035
+            },
+            "target_event_result": {
+                "left": 0.404046511627907,
+                "top": 0.207,
+                "width": 0.18555813953488376,
+                "height": 0.033
+            }
+        },
+        "thresholds": {
+            "skill_trigger_ratio": 0.25,
+            "skill_color_advantage_ratio": 0.02,
+            "target_event_color_ratio": 0.25
+        },
+        "color_profiles": {
+            "skill_red": {
+                "sample_color": [
+                    148,
+                    64,
+                    72
+                ],
+                "tolerance": 60.0,
+                "min_ratio": 0.25
+            },
+            "skill_blue": {
+                "sample_color": [
+                    39,
+                    63,
+                    126
+                ],
+                "tolerance": 60.0,
+                "min_ratio": 0.25
+            },
+            "target_event_color_a": {
+                "sample_color": [
+                    124,
+                    54,
+                    58
+                ],
+                "tolerance": 60.0,
+                "min_ratio": 0.25
+            },
+            "target_event_color_b": {
+                "sample_color": [
+                    59,
+                    82,
+                    118
+                ],
+                "tolerance": 60.0,
+                "min_ratio": 0.25
+            }
+        }
+    },
+    "ocr_time_sync_interval_seconds": 60.0,
+    "screen_monitor_interval_seconds": 0.7,
+    "enable_target_event_settings": true,
+    "ocr_target_event_detection": true,
+    "target_event_detection": {
+        "targets": [
+            {
+                "id": "zhang_bao",
+                "display_name": "目标A",
+                "match_names": [
+                    "Zhang Bao",
+                    "张豹"
+                ],
+                "ocr_keywords": [
+                    "张",
+                    "豹",
+                    "张豹"
+                ],
+                "time_windows": [
+                    {
+                        "start": "27:10",
+                        "end": "24:30"
+                    }
+                ],
+                "faction_match": "distinguish",
+                "ignore_keywords": [
+                    "即将",
+                    "出没",
+                    "刷新",
+                    "禅益",
+                    "人墙",
+                    "大鹅",
+                    "箭塔",
+                    "野怪",
+                    "兵",
+                    "据点",
+                    "数据"
+                ],
+                "spawn_sound": "dragon_spawn.mp3",
+                "buff_duration": 120,
+                "result_window_seconds": 180,
+                "result_keywords": [
+                    "最后一击",
+                    "击败",
+                    "完成",
+                    "获得",
+                    "效果"
+                ],
+                "result_sound": ""
+            },
+            {
+                "id": "zhuye_gule",
+                "display_name": "目标B",
+                "match_names": [
+                    "Zhuye Gule",
+                    "朱邪骨勒",
+                    "朱邪"
+                ],
+                "ocr_keywords": [
+                    "朱邪",
+                    "骨勒"
+                ],
+                "time_windows": [
+                    {
+                        "start": "17:20",
+                        "end": "14:30"
+                    }
+                ],
+                "faction_match": "distinguish",
+                "ignore_keywords": [
+                    "即将",
+                    "出没",
+                    "刷新",
+                    "禅益",
+                    "人墙",
+                    "大鹅",
+                    "箭塔",
+                    "野怪",
+                    "兵",
+                    "据点",
+                    "数据"
+                ],
+                "spawn_sound": "dragon_spawn.mp3",
+                "buff_duration": 300,
+                "result_window_seconds": 180,
+                "result_keywords": [
+                    "最后一击",
+                    "击败",
+                    "完成",
+                    "获得",
+                    "效果"
+                ],
+                "result_sound": ""
+            }
+        ]
+    },
+    "primary_entries": [
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "id": "Quick Step",
+            "name": "一往无前",
+            "cooldown": 120.0,
+            "duration": 5.0,
+            "default_hotkey": "",
+            "sound": "command_skills/Quick Step.MP3",
+            "ocr_color": "red",
+            "ocr_keywords": [
+                "一往无前"
+            ],
+            "cd_threshold": 3.0,
+            "cd_flash": true,
+            "cd_sound": "command_skills/cd_Quick Step.mp3"
+        },
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "id": "Healing Reduction",
+            "name": "釜底抽薪",
+            "cooldown": 120.0,
+            "duration": 15.0,
+            "default_hotkey": "",
+            "sound": "command_skills/healing_reduction.mp3",
+            "ocr_color": "red",
+            "ocr_keywords": [
+                "釜底抽薪",
+                "底抽薪",
+                "减疗",
+                "降疗"
+            ],
+            "cd_threshold": 5.0,
+            "cd_flash": true,
+            "cd_sound": "command_skills/cd_healing_reduction.mp3"
+        },
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "id": "Ally Healing Reduction",
+            "name": "釜底抽薪(己)",
+            "type": "ally",
+            "cooldown": 120.0,
+            "duration": 15.0,
+            "default_hotkey": "",
+            "sound": "command_skills/ally_healing_reduction.mp3",
+            "ocr_color": "blue",
+            "ocr_keywords": [
+                "釜底抽薪",
+                "底抽薪",
+                "减疗",
+                "降疗"
+            ],
+            "cd_threshold": 5.0,
+            "cd_flash": true,
+            "cd_sound": "command_skills/cd_ally_healing_reduction.mp3"
+        }
+    ],
+    "extended_entries": [
+        {
+            "is_enabled": true,
+            "is_muted": true,
+            "id": "Spirit Vision",
+            "name": "清风霁月",
+            "cooldown": 20.0,
+            "default_hotkey": "alt",
+            "sound": "",
+            "flash_threshold": 3.0
+        }
+    ],
+    "enable_primary_entries": true,
+    "enable_extended_entries": false,
+    "ocr_primary_entries": true,
+    "ocr_downsample_to_reference": true,
+    "ocr_reference_screen_width": 1920,
+    "ocr_reference_screen_height": 1080,
+    "ocr_runtime_max_threads": 4
+}

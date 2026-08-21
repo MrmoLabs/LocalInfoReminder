@@ -1,0 +1,285 @@
+{
+    "session_state": {
+        "time": "25:00",
+        "classes": {
+            "Group A": {
+                "count": 1,
+                "mode_index": 0
+            },
+            "Group B": {
+                "count": 1,
+                "mode_index": 0
+            },
+            "Group C": {
+                "count": 1,
+                "mode_index": 0
+            }
+        }
+    },
+    "global_events": [
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "time": "20:00",
+            "name": "喝水提醒",
+            "sound": "global_events/event_a.mp3"
+        },
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "time": "10:00",
+            "name": "起身活动",
+            "sound": "global_events/event_b.mp3"
+        }
+    ],
+    "classes_template": [
+        {
+            "is_enabled": true,
+            "id": "Group A",
+            "name": "专注轮换A",
+            "default_hotkey": "num_1",
+            "interval": 15.0,
+            "cooldown": 60.0,
+            "skip_cd_hotkey": "Click to Set",
+            "is_muted": false
+        },
+        {
+            "is_enabled": true,
+            "id": "Group B",
+            "name": "专注轮换B",
+            "default_hotkey": "num_2",
+            "interval": 15.0,
+            "cooldown": 60.0,
+            "skip_cd_hotkey": "Click to Set",
+            "is_muted": false
+        },
+        {
+            "is_enabled": true,
+            "id": "Group C",
+            "name": "专注轮换C",
+            "default_hotkey": "num_3",
+            "interval": 15.0,
+            "cooldown": 60.0,
+            "skip_cd_hotkey": "Click to Set",
+            "is_muted": false
+        }
+    ],
+    "overlay_bg_alpha": 120,
+    "hide_overlay_background": false,
+    "ocr_enabled": false,
+    "enable_time_display": true,
+    "enable_classes": true,
+    "enable_global_events": true,
+    "ocr_time_sync": false,
+    "miracle_flash_threshold": 3.0,
+    "vision_detection": {
+        "regions": {
+            "skill_bar": {
+                "left": 0.3646,
+                "top": 0.2083,
+                "width": 0.2969,
+                "height": 0.0417
+            },
+            "time_main": {
+                "left": 0.46875,
+                "top": 0.02315,
+                "width": 0.05729,
+                "height": 0.0463
+            },
+            "time_prep": {
+                "left": 0.47656,
+                "top": 0.14352,
+                "width": 0.04896,
+                "height": 0.0463
+            },
+            "target_event_notification": {
+                "left": 0.368,
+                "top": 0.207,
+                "width": 0.253,
+                "height": 0.035
+            },
+            "target_event_result": {
+                "left": 0.368,
+                "top": 0.207,
+                "width": 0.253,
+                "height": 0.035
+            }
+        },
+        "thresholds": {
+            "skill_trigger_ratio": 0.01,
+            "skill_color_advantage_ratio": 0.02,
+            "target_event_color_ratio": 0.03
+        },
+        "color_profiles": {
+            "skill_red": {
+                "sample_color": [
+                    255,
+                    60,
+                    60
+                ],
+                "tolerance": 110.0,
+                "min_ratio": 0.01
+            },
+            "skill_blue": {
+                "sample_color": [
+                    70,
+                    130,
+                    255
+                ],
+                "tolerance": 110.0,
+                "min_ratio": 0.01
+            },
+            "target_event_color_a": {
+                "sample_color": [
+                    255,
+                    60,
+                    60
+                ],
+                "tolerance": 110.0,
+                "min_ratio": 0.03
+            },
+            "target_event_color_b": {
+                "sample_color": [
+                    70,
+                    130,
+                    255
+                ],
+                "tolerance": 110.0,
+                "min_ratio": 0.03
+            }
+        }
+    },
+    "ocr_time_sync_interval_seconds": 60.0,
+    "screen_monitor_interval_seconds": 0.7,
+    "enable_target_event_settings": false,
+    "ocr_target_event_detection": false,
+    "target_event_detection": {
+        "targets": [
+            {
+                "id": "target_a",
+                "display_name": "目标A",
+                "match_names": [
+                    "Target A",
+                    "目标A"
+                ],
+                "ocr_keywords": [
+                    "目标A"
+                ],
+                "time_windows": [
+                    {
+                        "start": "27:10",
+                        "end": "24:30"
+                    },
+                    {
+                        "start": "17:20",
+                        "end": "14:30"
+                    }
+                ],
+                "faction_match": "distinguish",
+                "ignore_keywords": [
+                    "即将",
+                    "出现",
+                    "提示",
+                    "数据"
+                ],
+                "spawn_sound": "event_a.mp3",
+                "buff_duration": 120,
+                "result_window_seconds": 180,
+                "result_keywords": [
+                    "完成",
+                    "获得"
+                ],
+                "result_sound": ""
+            },
+            {
+                "id": "target_b",
+                "display_name": "目标B",
+                "match_names": [
+                    "Target B",
+                    "目标B"
+                ],
+                "ocr_keywords": [
+                    "目标B"
+                ],
+                "time_windows": [
+                    {
+                        "start": "27:10",
+                        "end": "24:30"
+                    },
+                    {
+                        "start": "17:20",
+                        "end": "14:30"
+                    }
+                ],
+                "faction_match": "distinguish",
+                "ignore_keywords": [
+                    "即将",
+                    "出现",
+                    "提示",
+                    "数据"
+                ],
+                "spawn_sound": "event_b.mp3",
+                "buff_duration": 300,
+                "result_window_seconds": 180,
+                "result_keywords": [
+                    "完成",
+                    "获得"
+                ],
+                "result_sound": ""
+            }
+        ]
+    },
+    "primary_entries": [
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "id": "Skill A",
+            "name": "喝水提醒",
+            "cooldown": 60.0,
+            "duration": 3.0,
+            "default_hotkey": "f6",
+            "sound": "command_skills/skill_a.mp3",
+            "ocr_color": "",
+            "ocr_keywords": [
+                "喝水",
+                "饮水"
+            ],
+            "cd_threshold": 5.0,
+            "cd_flash": true,
+            "cd_sound": "command_skills/cd_skill_a.mp3"
+        },
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "id": "Skill B",
+            "name": "眼部休息",
+            "cooldown": 45.0,
+            "duration": 5.0,
+            "default_hotkey": "f7",
+            "sound": "command_skills/skill_b.mp3",
+            "ocr_color": "",
+            "ocr_keywords": [
+                "休息",
+                "眼部"
+            ],
+            "cd_threshold": 5.0,
+            "cd_flash": true,
+            "cd_sound": "command_skills/cd_skill_b.mp3"
+        }
+    ],
+    "extended_entries": [
+        {
+            "is_enabled": true,
+            "is_muted": false,
+            "id": "Extended A",
+            "name": "短休息",
+            "cooldown": 20.0,
+            "default_hotkey": "alt",
+            "sound": "miracle_skills/extended_a.mp3",
+            "flash_threshold": 3.0
+        }
+    ],
+    "enable_primary_entries": true,
+    "enable_extended_entries": true,
+    "ocr_primary_entries": false
+}
